@@ -1,6 +1,6 @@
-import ExpenseItemList from "./components/ExpenseItemList";
-
-function App() {
+import ExpenseItemList from "./components/Expenses/ExpenseItemList";
+import NewExpense from "./components/NewExpense/NewExpense";
+const App = () => {
   const expenses = [
     { title: "Car insurance", amount: 1, date: new Date(2022, 5, 15) },
     { title: "Car wash", amount: 1345, date: new Date(2022, 5, 10) },
@@ -12,12 +12,10 @@ function App() {
   return (
     <div>
       <p>Site-ul meu web!</p>
-
-      <ExpenseItemList items = {expenses}/>
-
-     
+      <NewExpense></NewExpense>
+      <ExpenseItemList items={expenses} />
     </div>
   );
-}
+};
 
 export default App;
